@@ -6,7 +6,7 @@
   "author": "olamileke <olamileke.f@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "tsc-watch --onSuccess \"node ./dist/api.js\""
+    "start": "tsc-watch --onSuccess \"node ./dist/app.js\""
   },
   "dependencies": {
     "dotenv": "^16.0.1",
