@@ -6,6 +6,7 @@
   "author": "olamileke <olamileke.f@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "npx tsc",
     "start": "tsc-watch --onSuccess \"node ./dist/app.js\""
   },
   "dependencies": {
