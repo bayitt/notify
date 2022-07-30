@@ -13,17 +13,16 @@ export const statuses: { [key: string]: (string | TStatusTextFunc)[] } = {
     "Build Completed",
     (service: string) => `The ${service} build is done.`,
   ],
-  build_pushed: [
+  image_pushed: [
     "Image Pushed",
     (service: string) =>
       `The just built image for ${service} has been successfully pushed to Dockerhub.`,
   ],
-  container_recreated: [
-    "Container Recreated",
-    (service: string) =>
-      `The container for ${service} has been successfully recreated based on the latest image.`,
+  deployed: [
+    "Application deployed",
+    (service: string) => `${service} has been deployed successfully.`,
   ],
-  pipeline_failed: [
+  failed: [
     "Pipeline Failed",
     (service: string) => `The build pipeline for ${service} has failed.`,
   ],
