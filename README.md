@@ -6,7 +6,7 @@ I've recently been setting up CI/CD for a few of my side projects via Github Act
 
 I had a look at the current existing options for notifications and for some reason or another, none of them really did exactly what I wanted. Either they only sent out notifications when the build was completed/failed or did not offer the specific notification channel I wanted, in this case, email.
 
-As a self-professed lazy engineer I figured I would just build a custom solution to fit my needs. As a result, I am building out this service to trigger notifications at different points in the build pipeline. Basically when
+As a self-professed lazy engineer I figured I would just build a custom solution to fit my needs. So I built out this service to trigger notifications at different points in the build pipeline. Basically when
 
 - the build of the image begins
 - the build of the image is completed
