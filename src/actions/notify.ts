@@ -45,7 +45,15 @@ export const notify = async (
   const text = (params[1] as TStatusTextFunc)(service);
 
   const mail = new Mail();
-  await mail.send(subject, text);
+
+  try {
+    await mail.send(subject, text);
+  } catch (error) {
+    res.status(400).json({
+      errors: [{ msg: "There was an issue sending the notification." }],
+    });
+    return res.end();
+  }
 
   res.status(200).json({ message: "Notification sent successfully" });
 };

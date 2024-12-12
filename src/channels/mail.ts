@@ -1,9 +1,9 @@
 import Mailgun from "mailgun.js";
-import Client from "mailgun.js/dist/lib/client";
 import { default as formData } from "form-data";
+import { IMailgunClient } from "mailgun.js/Interfaces";
 
 export class Mail {
-  private mailClient: Client;
+  private mailClient: IMailgunClient;
 
   constructor() {
     const mailgun = new Mailgun(formData);
@@ -13,10 +13,10 @@ export class Mail {
     });
   }
 
-  public async send(subject: string, text: string) {
+  public async send(subject: string, text: string, isTest = false) {
     const params = {
       from: process.env.MAIL_FROM as string,
-      to: process.env.MAIL_TO as string,
+      to: isTest ? "abc@olamileke.dev" : (process.env.MAIL_TO as string),
       subject,
       text,
     };
