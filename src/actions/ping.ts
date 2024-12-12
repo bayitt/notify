@@ -6,7 +6,8 @@ export const ping = async (req: Request, res: Response, next: NextFunction) => {
     const mail = new Mail();
     await mail.send(
       "This is a test ping email",
-      "This is a test ping email status"
+      "This is a test ping email status",
+      true
     );
     res.status(200).json({ email: "healthy" });
   } catch (error) {
