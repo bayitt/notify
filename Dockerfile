@@ -1,5 +1,5 @@
-FROM node:17-alpine AS final
-FROM node:17-alpine AS build
+FROM node:20-alpine AS final
+FROM node:20-alpine AS build
 
 # Build step of the Dockerfile. Compiles the application into a smaller, sleeked down, optimized build.
 WORKDIR usr/src/app
