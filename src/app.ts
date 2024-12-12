@@ -1,6 +1,7 @@
 import express from "express";
 import { notifyRouter, pingRouter } from "./routes";
 import { bootstrap, loadEnv } from "./utilities";
+import { Request, Response, NextFunction } from "express";
 
 // Loading up relevant environment variables
 loadEnv();
